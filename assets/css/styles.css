@@ -1,0 +1,44 @@
+#title {
+    margin-top: 10px;
+}
+
+#title small {
+    font-size: 70%;
+}
+
+.column-type-error {
+    margin-top: -3px;
+}
+
+.column-custom {
+    margin-top: 6px;
+}
+
+label.error {
+    color: #ff4450;
+    font-size: .9em;
+}
+
+.hidden {
+    display: none !important;
+}
+
+@media (min-width: 576px) {
+    .select2-container--bootstrap4 {
+        transform: scale(0.85);
+    }
+
+    .col-column-type {
+        margin-top: -3px;
+    }
+}
+
+@media (max-width: 575px) {
+    .col-column-type {
+        margin-top: 3px;
+    }
+
+    .col-action {
+        margin-top: 6px;
+    }
+}

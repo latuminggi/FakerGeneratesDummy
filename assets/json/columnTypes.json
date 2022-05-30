@@ -1,0 +1,71 @@
+{
+    "Custom": {
+        "StaticConstant": {"name":"Static Constant", "api":"function(f){return f.datatype.float()}"}
+    },
+    "Address": {
+        "BuildingNumber": {"name":"Building Number", "api":"function(f){return f.address.buildingNumber()}" },
+        "CardinalDirection": {"name":"Cardinal Direction", "api":"function(f){return f.address.cardinalDirection()}" },
+        "City": {"name":"City", "api":"function(f){return f.address.cityName()}" },
+        "CityName": {"name":"City Name", "api":"function(f){return f.address.cityName()}" },
+        "CityPrefix": {"name":"City Prefix", "api":"function(f){return f.address.cityPrefix()}" },
+        "CitySuffix": {"name":"City Suffix", "api":"function(f){return f.address.citySuffix()}" },
+        "Country": {"name":"Country", "api":"function(f){return f.address.country()}" },
+        "CountryCode": {"name":"Country Code", "api":"function(f){return f.address.countryCode()}" },
+        "County": {"name":"County", "api":"function(f){return f.address.county()}" },
+        "Direction": {"name":"Direction", "api":"function(f){return f.address.direction()}" },
+        "Latitude": {"name":"Latitude", "api":"function(f){return f.address.latitude()}" },
+        "Longitude": {"name":"Longitude", "api":"function(f){return f.address.longitude()}" },
+        "NearbyGPSCoordinate": {"name":"Nearby GPS Coordinate", "api":"function(f){return f.address.nearbyGPSCoordinate()}" },
+        "OrdinalDirection": {"name":"Ordinal Direction", "api":"function(f){return f.address.ordinalDirection()}" },
+        "SecondaryAddress": {"name":"Secondary Address", "api":"function(f){return f.address.secondaryAddress()}" },
+        "State": {"name":"State", "api":"function(f){return f.address.state()}" },
+        "StateAbbr": {"name":"State Abbr", "api":"function(f){return f.address.stateAbbr()}" },
+        "Street": {"name":"Street", "api":"function(f){return f.address.street()}" },
+        "StreetAddress": {"name":"Street Address", "api":"function(f){return f.address.streetAddress()}" },
+        "StreetName": {"name":"Street Name", "api":"function(f){return f.address.street()}" },
+        "StreetPrefix": {"name":"Street Prefix", "api":"function(f){return f.address.streetPrefix()}" },
+        "StreetSuffix": {"name":"Street Suffix", "api":"function(f){return f.address.streetSuffix()}" },
+        "TimeZone": {"name":"Time Zone", "api":"function(f){return f.address.timeZone()}" },
+        "ZipCode": {"name":"Zip Code", "api":"function(f){return f.address.zipCode()}" },
+        "ZipCodeByState": {"name":"Zip Code By State", "api":"function(f){return f.address.zipCodeByState()}" }
+    },
+    "Animal": {
+        "Bear": {"name":"Bear", "api":"function(f){return f.animal.bear()}" },
+        "Bird": {"name":"Bird", "api":"function(f){return f.animal.bird()}" },
+        "Cat": {"name":"Cat", "api":"function(f){return f.animal.cat()}" },
+        "Cetacean": {"name":"Cetacean", "api":"function(f){return f.animal.cetacean()}" },
+        "Cow": {"name":"Cow", "api":"function(f){return f.animal.cow()}" },
+        "Crocodilia": {"name":"Crocodilia", "api":"function(f){return f.animal.crocodilia()}" },
+        "Dog": {"name":"Dog", "api":"function(f){return f.animal.dog()}" },
+        "Fish": {"name":"Fish", "api":"function(f){return f.animal.fish()}" },
+        "Horse": {"name":"Horse", "api":"function(f){return f.animal.horse()}" },
+        "Insect": {"name":"Insect", "api":"function(f){return f.animal.insect()}" },
+        "Lion": {"name":"Lion", "api":"function(f){return f.animal.lion()}" },
+        "Rabbit": {"name":"Rabbit", "api":"function(f){return f.animal.rabbit()}" },
+        "Snake": {"name":"Snake", "api":"function(f){return f.animal.snake()}" },
+        "Type": {"name":"Type", "api":"function(f){return f.animal.type()}" }
+    },
+    "Color": {
+        "Cmyk": {"name":"CMYK", "api":"function(f){return f.color.cmyk()}" },
+        "ColorByCSSColorSpace": {"name":"Color By CSS Color Space", "api":"function(f){return f.color.colorByCSSColorSpace()}" },
+        "CssSupportedFunction": {"name":"CSS Supported Function", "api":"function(f){return f.color.cssSupportedFunction()}" },
+        "CssSupportedSpace": {"name":"CSS Supported Space", "api":"function(f){return f.color.cssSupportedSpace()}" },
+        "Hsl": {"name":"HSL", "api":"function(f){return f.color.hsl()}" },
+        "Human": {"name":"Human", "api":"function(f){return f.color.human()}" },
+        "Hwb": {"name":"HWB", "api":"function(f){return f.color.hwb()}" },
+        "Lab": {"name":"LAB", "api":"function(f){return f.color.lab()}" },
+        "Lch": {"name":"LCH", "api":"function(f){return f.color.lch()}" },
+        "Rgb": {"name":"RGB", "api":"function(f){return f.color.rgb()}" },
+        "Space": {"name":"Space", "api":"function(f){return f.color.space()}" }
+    },
+    "Commerce": {
+        "Color": {"name":"Color", "api":"function(f){return f.color.human()}" },
+        "Department": {"name":"Department", "api":"function(f){return f.commerce.department()}" },
+        "Price": {"name":"Price", "api":"function(f){return f.commerce.price()}" },
+        "Product": {"name":"Product", "api":"function(f){return f.commerce.product()}" },
+        "ProductAdjective": {"name":"Product Adjective", "api":"function(f){return f.commerce.productAdjective()}" },
+        "ProductDescription": {"name":"Product Description", "api":"function(f){return f.commerce.productDescription()}" },
+        "ProductMaterial": {"name":"Product Material", "api":"function(f){return f.commerce.productMaterial()}" },
+        "ProductName": {"name":"Product Name", "api":"function(f){return f.commerce.productName()}" }
+    }
+}

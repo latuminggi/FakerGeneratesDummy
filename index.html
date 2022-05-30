@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>FakerGeneratesDummy</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@ttskch/select2-bootstrap4-theme@1.5.2/dist/select2-bootstrap4.min.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body class="bg-dark text-light">
+    <div class="container-fluid">
+        <h2 id="title"></h2>
+        <hr class="border-light" />
+        <div class="row">
+            <div class="col-sm">
+                <form id="dataGenerator">
+                    <div class="row">
+                        <div class="col-sm">
+                            <label>Total data (default: 10)</label>
+                            <div class="form-group text-center">
+                                <input type="number" class="form-control form-control-sm" name="totalData" placeholder="How many total rows data" value="10" min="1" max="1000" required />
+                            </div>
+                        </div>
+                        <div class="col-sm">
+                            <label>Result type</label>
+                            <div class="form-group text-center">
+                                <select class="custom-select custom-select-sm" name="dataType" required>
+                                    <option disabled selected>Data type of result</option>
+                                    <option value="json">JSON</option>
+                                    <option value="xml">XML</option>
+                                    <option value="sql">SQL</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm col-table-name hidden">
+                            <label>Table name</label>
+                            <div class="form-group text-center">
+                                <input type="text" class="form-control form-control-sm" name="tableName" placeholder="Your table name" minlength="1" maxlength="100" required disabled />
+                            </div>
+                        </div>
+                    </div>
+                    <div id="dataColumns"></div>
+                    <hr class="border-light" />
+                    <a id="btn-add-col" class="btn btn-sm btn-success float-right" title="Add column">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </a>
+                    <button type="submit" class="btn btn-sm btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+        <br />
+    </div>
+</body>
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+<script src="assets/js/php.js"></script>
+<script src="assets/js/scripts.js" type="module"></script>
+</html>
