@@ -1,11 +1,22 @@
 import { faker } from '//cdn.jsdelivr.net/npm/@faker-js/faker/+esm';
 
 let fgdVersion = '0.1';
+let fgdGitUrl = 'https://github.com/latuminggi/FakerGeneratesDummy';
+let fgdPageUrl = 'https://latuminggi.github.io/FakerGeneratesDummy';
+let fakerLogoUrl = 'https://fakerjs.dev/logo.svg';
 let dataGenerator = $('#dataGenerator');
 let dataColumns = $('#dataColumns');
 let colTypeHint = 'Select dummy data type';
+
 $('body').css('word-break', 'break-word');
-$('#title').html( $('title').text() +' <small>v'+ fgdVersion +'</small>' );
+$('[property="og:title"]').attr( 'content', $('title').text() );
+$('[property="og:type"]').attr( 'content', 'website' );
+$('[property="og:url"]').attr( 'content', fgdPageUrl );
+$('[property="og:image"]').attr( 'content', fakerLogoUrl );
+$('#title').html( 
+    $('title').text() +' <small>v'+ fgdVersion +'</small> <span class="link-git">' +
+    '<a href="'+ fgdGitUrl +'"><i class="fa fa-github text-light" aria-hidden="true"></i></a></span>'
+);
 addDataCol();
 
 function addDataCol() {
