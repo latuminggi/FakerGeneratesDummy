@@ -1,12 +1,18 @@
+//github.com/faker-js/faker
 import { faker } from '//cdn.jsdelivr.net/npm/@faker-js/faker/+esm';
 
 let fgdVersion = '0.1';
 let fgdGitUrl = 'https://github.com/latuminggi/FakerGeneratesDummy';
 let fgdPageUrl = 'https://latuminggi.github.io/FakerGeneratesDummy';
+let fgdApiHost = ( window.location.host === 'latuminggi.github.io' ) ? 
+                 'latuminggi.infinityfreeapp.com' : window.location.host;
+let fgdApiUrl = '//'+ fgdApiHost +'/FakerGeneratesDummy/api'; console.log('fgdApiUrl', fgdApiUrl)
 let fakerLogoUrl = 'https://fakerjs.dev/logo.svg';
 let dataGenerator = $('#dataGenerator');
 let dataColumns = $('#dataColumns');
 let colTypeHint = 'Select dummy data type';
+let windowWidth = $(window).width();
+let maxMobileWidth = 575;
 
 $('body').css('word-break', 'break-word');
 $('[property="og:title"]').attr( 'content', $('title').text() );
@@ -17,7 +23,7 @@ $('#title').html(
     $('title').text() +' <small>v'+ fgdVersion +'</small> <span class="link-git">' +
     '<a href="'+ fgdGitUrl +'"><i class="fa fa-github text-light" aria-hidden="true"></i></a></span>'
 );
-addDataCol();
+dataGenerator.attr('action', fgdApiUrl); addDataCol();
 
 function addDataCol() {
     $.ajax({ url: 'assets/html/column.html', })
@@ -57,6 +63,8 @@ function addDataCol() {
                 $('body').find('.col-table-name input').attr( 'placeholder', 
                     'Table name (e.g. '+ tableName +')' 
                 )
+
+                
 
                 $('.column-name').on('change keyup', function(e) {
                     if ( $(this).val() !== '' ) { $(this).attr('data-inputbyhuman', true); } 
@@ -127,6 +135,12 @@ $('#btn-add-col').on('click', function() { addDataCol(); });
 MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
 var observer = new MutationObserver(function(mutations, observer) {
     $('body').find('.select2-container--bootstrap4').addClass('text-dark');
+
+    var colTypeWidth = $('.column-type-field').find('.select2-container[data-select2-id]').width();
+    if ( windowWidth <= maxMobileWidth ) {
+        $('[name="totalData"], [name="dataType"], [name="tableName"], .column-name')
+            .css( 'width', colTypeWidth ).css('margin', '0 auto');
+    }
 });
 
 observer.observe(document, {

@@ -39,10 +39,15 @@ label.error {
 
 @media (max-width: 575px) {
     .col-column-type {
-        margin-top: 3px;
+        margin-top: 10px;
+    }
+
+    .column-custom {
+        margin-top: 13px;
     }
 
     .col-action {
-        margin-top: 6px;
+        margin-top: 13px;
+        margin-right: 3vw;
     }
 }
